@@ -8,6 +8,8 @@
 }
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 ::-webkit-scrollbar{
     width:12px;
@@ -24,6 +26,7 @@
 body{
     font-family: 'Open Sans', sans-serif;
     margin: 0;
+    min-height: 900vh;
 }
 *:focus{
     outline: none;
@@ -98,6 +101,9 @@ bottom: -29px;
     }
     .hide-mobile{
         display: none;
+    }
+    .txt-c-mobile{
+        text-align: center;
     }
 }
 /*  //side bar*/
@@ -308,4 +314,494 @@ background-color: rgb(34 197 94 / 20%);
     }
 }
 /*  ///tickets */
+/* Latest news */
+.latest-news .news-row:not(:last-of-type){
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EEe;
+}
+.latest-news .news-row img{
+    width: 100px;
+}
+.latest-news .info{
+    flex-grow: 1;
+}
+.latest-news .info h3{
+    margin: 0 0 6px;
+}
+@media (max-width:767px){
+    .latest-news .news-row .label{
+        margin: 10px auto;
+        width: fit-content;
+    }
+}
+/* // Latest news */
+/* Tasks */
+.tasks .task-row:not(:last-of-type){
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.tasks .info{
+    flex-grow: 1;
+}
+.tasks .done{
+    opacity: 0.5;
+}
+.tasks .done h3,
+.tasks .done p{
+    text-decoration: line-through;
+}
+.tasks .delete{
+    cursor: pointer;
+    transition: 0.3s;
+}
+.tasks .delete:hover{
+    color: var(--red);
+}
+/* // Tasks */
+/*Latest uPLOAD*/
+.latest-uploads ul li:not(:last-child){
+    border-bottom: 1px solid #eee;
+}
+.latest-uploads ul li img{
+    width: 40px;
+    height: 40px;
+}
+/*  // Latest uPLOAD*/
+/* Last Project */
+.last-project ul::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--blue);
+    left: 11px;
+}
+.last-project ul li::before{
+    content:"";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid white;
+    outline: 2px solid var(--blue);
+    margin-right: 15px;  
+}
+.last-project ul li.done-p::before{
+    background-color: var(--blue);
+}
+.last-project ul li.working::before{
+    animation: change-color 0.8s infinite alternate;
+}
+.last-project .launch-icon{
+    position: absolute;
+    width: 160px;
+    right: 0;
+    bottom: 0;
+    opacity: .5;
+}
+/*   // Last Project */
+/* Riminders */
+.reminders ul li .key{
+    width: 15px;
+    height: 15px;
+}
+.reminders ul li >.blue{
+    border-left: 2px solid var(--blue);
+}
+.reminders ul li >.green{
+    border-left: 2px solid var(--green);
+}
+.reminders ul li >.red{
+    border-left: 2px solid var(--red);
+}
+.reminders ul li >.orange{
+    border-left: 2px solid var(--orange);
+}
+/*  // Riminders */
+/* Latest Post*/
+.latest-post .avatar{
+    width: 48px;
+    height: 48px;
+}
+.latest-post .post-cont{
+    text-transform: capitalize;
+    line-height: 1.8;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    min-height: 140px;
+}
+/* // Latest Post*/
+/* Social Media */
+.social .box{
+    padding-left: 70px;
+}
+.social .box i{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 52px;
+    transition: 0.3s;
+}
+.social .box i:hover{
+    transform: rotate(5deg);
+}
+.social .twitter{
+    background-color:rgba(29 161 242 /20%);
+    color: #1da1f2;
+}
+.social .twitter i,
+.social .twitter a{
+    background-color: #1da1f2;
+}
+.social .youtube{
+    background-color: #ff00003f;
+    color: #ff0000;
+}
+.social .youtube i,
+.social .youtube a{
+    background-color: #ff0000;
+}
+.social .facebook{
+    background-color: #1876f244;
+    color: #1877f2;
+}
+.social .facebook i,
+.social .facebook a{
+    background-color: #1877f2;
+}
+.social .linkedin{
+    background-color: #0076b544;
+    color:  #0077b5;
+}
+.social .linkedin i,
+.social .linkedin a{
+    background-color: #0077b5;
+}
+/* Social Media */
+/* Projects table */
+.projects .resp-table{
+    overflow-x:auto ;
+}
+.projects table{
+    min-width: 1000px;
+    border-spacing: 0;
+}
+.projects table thead td{
+    background-color: #eee;
+    font-weight: bold;
+}
+.projects table td{
+    padding: 15px;
+}
+.projects tbody td{
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    transition: 3s;
+}
+.projects tbody tr:hover td{
+    background-color: #423d3d2e;
+}
+.projects tbody tr td:last-child{
+    border-right: 1px solid #eee;
+}
+.projects table img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: white;
+}
+.projects table img:not(:first-child){
+    margin-left: -20px;
+}
+/* Projects table */
 /* // content */
+/*             ***** Settings *****************************/
+.settings-page{
+        grid-template-columns: repeat(auto-fill, minmax(450px,1fr))
+}
+@media (max-width:767px){
+    .settings-page{
+        grid-template-columns:minmax(100px,1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+.settings-page .close-msg{
+    border: 1px sloid #b00ccc;
+    resize: none;
+    min-height: 160px;
+}
+/* general info */
+.settings-page :disabled{
+    cursor: no-drop;
+    background-color: #f0f4f8;
+    color: #bbb;
+}
+#email{
+    display: inline-flex;
+    width: calc(100% - 81px);
+}
+
+/* security box */
+.sec-box:not(:last-of-type){
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+#change{
+    height: 35px;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:767px) {
+    #change{
+        height: 34px;
+    }
+}
+#change:hover{
+    background-color: var(--red);
+}
+.sec-box a:hover{
+    background-color: var(--blue-alt);
+}
+/* security box */
+/* social box */
+.social-box i{
+ width: 40px;
+ height: 40px;
+ background-color: #f6f6f6;
+ border: 1px solid #ddd;
+ border-right: none;
+ border-radius: 6px 0 0 6px;
+ transition: 0.3s;
+}
+.social-box input{
+    height: 40px;   
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    border-radius: 0 6px 6px 0;
+}
+.social-box > div:focus-within i.fa-twitter{
+    color: #1da1f2;
+}
+.social-box > div:focus-within i.fa-youtube{
+    color: #ff0000;
+}
+.social-box > div:focus-within i.fa-facebook{
+    color: #1877f2;
+}
+.social-box > div:focus-within i.fa-linkedin{
+    color: #0077b5;
+}
+/* social box */
+/*Widgets Control*/
+.w-control .control label{
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.w-control .control label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--grey);
+    margin-top: -9px;
+    border-radius: 4px;
+}
+.w-control .control label:hover::before{
+    border-color: var(--blue);
+}
+.w-control .control label::after{
+    font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    background-color: var(--blue);
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0) rotate(360deg);
+    transition: 0.3s;
+    border-radius: 4px;
+}
+.w-control .control input[type="checkbox"]{
+    appearance: none;
+}
+.w-control .control input[type="checkbox"]:checked + label::after{
+    transform: scale(1);
+}
+/*  // Widgets Control*/
+/*backup*/
+.bck-w .time input[type="radio"]{
+    appearance: none;
+}
+.bck-w .time label{
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+}
+.bck-w .time label::before{
+    content: ""; 
+    position: absolute;  
+    top: 50%;
+    left: 0;
+    margin-top: -11px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--grey);
+}
+.bck-w .time label::after{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    transition: 0.3s;
+    transform: scale(0);
+}
+.bck-w .time input[type="radio"]:checked + label::before{
+   border-color: var(--blue);
+}
+.bck-w .time input[type="radio"]:checked + label::after{
+    transform: scale(1);
+}
+
+.bck-w .servers input[type="radio"]{
+    appearance: none;
+}
+.bck-w .servers{
+    border-top: 1px solid #eee;
+    gap: 4px;
+}
+@media(max-width:767px){
+    .bck-w .servers{
+        flex-wrap: wrap;
+    }
+}
+.bck-w .servers .serv{
+    border: 2px solid #eee;
+}
+.bck-w .servers .serv label{
+    cursor: pointer;
+}
+.bck-w .servers input[type="radio"]:checked + .serv{
+    border-color: var(--blue);
+    color: var(--blue);
+}
+/* // backup*/
+/*   ///  general info */
+.toggle-chk{
+    appearance: none;    
+    display: none;
+}
+.toggle-switch{
+    width: 78px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.toggle-switch::before{
+    display: block;
+    position: absolute;
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    font-weight: 900;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    transition: 0.3s;
+}
+.toggle-chk:checked + .toggle-switch{
+    background-color: var(--blue);
+
+}
+.toggle-chk:checked + .toggle-switch::before{
+    left: 50px;
+    color: var(--blue);
+    content: "\f00c";
+
+}
+/*       //->      ***** Settings *****************************/
+/*         ****** profile-page****            /*/
+.profile-page .avatar-box{
+    width: 300px;
+    border-right: 1px solid #eee;
+}
+@media (max-width:767px){
+    .profile-page .avatar-box{
+        border-right:none;
+    }  
+    .profile-page .overview{
+        flex-direction: column;
+    }
+}
+.profile-page .avatar-box > img{
+    width: 120px;
+    height: 120px;
+}
+.profile-page .avatar-box .level{
+    height: 5px;
+    overflow: hidden;
+    margin: auto;
+    width: 70%;
+}
+.profile-page .avatar-box .level span{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.profile-page .info-box .box{
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eee;
+    transition: 0.3s;
+}
+.profile-page .info-box .box:hover{
+    background-color: #423d3d0f;
+}
+.profile-page .info-box .box > div{
+    padding: 10px 0 0;
+    min-width: 300px;
+}
+.profile-page .info-box .box h4{
+    font-weight: normal;
+}
+/*        /// -->  ****** profile-page****            /*/
+/* Animations */
+@keyframes change-color {
+    from{
+        background-color: var(--blue);
+    }
+    to{
+        background-color: white;
+    }
+}
+/*   // Animations */
