@@ -1,0 +1,170 @@
+<!-- <label>
+    <input type="checkbox" class="toggle-chk" checked>
+    <div class="toggle-switch bg-ccc">
+    </div>
+</label> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Files</title>
+       <!-- font awesome -->
+       <link rel="stylesheet" href="css/all.min.css">
+       <!-- //font awesome -->
+    <link rel="stylesheet" href="css/FRM.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
+     <!-- //google fonts -->
+  
+</head>
+<body>
+  <div class="page d-flex">
+    <div class="sidebar bg-w p-20 p-rel">
+        <h3 class="p-rel c-txt mt-0">7arbi</h3>
+        <ul>
+           <li>
+                <a class="d-flex align-center fs-14 rad-6 p-10 c-black" href="index.html">
+                    <i class="fa-solid fa-chart-bar afw"></i>
+                    <span class="hide-mobile">
+                        Dashboard
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex align-center fs-14 rad-6 p-10 c-black" href="settings.html">
+                    <i class="fa-solid fa-gear afw"></i>
+                    <span class="hide-mobile">
+                        Settings
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex align-center fs-14 rad-6 p-10 c-black" href="profile.html">
+                    <i class="fa-solid fa-user afw"></i>
+                    <span class="hide-mobile">
+                        Profile
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex align-center fs-14 rad-6 p-10 c-black" href="projects.html">
+                    <i class="fa-solid fa-diagram-project afw"></i>
+                    <span class="hide-mobile">
+                        Projects
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex align-center fs-14 rad-6 p-10 c-black" href="courses.html">
+                    <i class="fa-solid fa-user-graduate afw"></i>
+                    <span class="hide-mobile">
+                        Courses
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex align-center fs-14 rad-6 p-10 c-black" href="friends.html">
+                    <i class="fa-solid fa-user-group afw"></i>
+                    <span class="hide-mobile">
+                        Friends
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="active d-flex align-center fs-14 rad-6 p-10 c-black" href="files.html">
+                    <i class="fa-regular fa-file afw"></i>
+                    <span class="hide-mobile">
+                        Files
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex align-center fs-14 rad-6 p-10 c-black" href="plans.html">
+                    <i class="fa-solid fa-sheet-plastic afw"></i>
+                    <span class="hide-mobile">
+                        Plans
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="content w-full ov-hid">
+        <!-- head div -->
+        <div class="head bg-w p-15 bet-flex">
+            <div class="search p-rel">
+                <input class="p-10 border-ccc rad-10" type="search" placeholder="Type St to search">
+            </div>
+            <div class="icons d-flex align-center">
+                <span class="p-rel notifications">
+                    <i class="fa-solid fa-bell"></i>
+                </span>
+                <img src="imgs/avatar.png" alt="">
+            </div>
+        </div>
+        <!-- // head div -->
+        <h1 class="p-rel">
+            Files
+        </h1>
+        <div class="d-flex m-20 g-20 files-page">
+            <div class="files-stats bg-w rad-10 p-20">
+                <h2 class="mt-0 mb-15 txt-c-mobile">
+                    Files Statics
+                </h2>
+                <div class="d-flex align-center border-eee p-10 rad-6 mb-15 fs-13">
+                    <i class="fa-regular fa-file-pdf fa-la blue center-flex c-blue icon"></i>
+                    <div class="info">
+                        <span>PDF Files</span>
+                        <span class="d-b c-grey mt-5">130</span>
+                    </div>
+                    <div class="size">
+                        6.5GB
+                    </div>
+                </div>
+                <div class="d-flex align-center border-eee p-10 rad-6 mb-15 fs-13">
+                    <i class="fa-regular fa-image fa-la green center-flex c-green icon"></i>
+                    <div class="info">
+                        <span>Images</span>
+                        <span class="d-b c-grey mt-5">115 Files</span>
+                    </div>
+                    <div class="size">
+                        3.5GB
+                    </div>
+                </div>
+                <div class="d-flex align-center border-eee p-10 rad-6 mb-15 fs-13">
+                    <i class="fa-regular fa-file-word fa-la red center-flex c-red icon"></i>
+                    <div class="info">
+                        <span>Word Files</span>
+                        <span class="d-b c-grey mt-5">82</span>
+                    </div>
+                    <div class="size">
+                        2.1GB
+                    </div>
+                </div>
+                <div class="d-flex align-center border-eee p-10 rad-6 mb-15 fs-13">
+                    <i class="fa-solid fa-file-csv fa-la orange center-flex c-orange icon"></i>
+                    <div class="info">
+                        <span>CSV Files</span>
+                        <span class="d-b c-grey mt-5">45</span>
+                    </div>
+                    <div class="size">
+                        1.8GB
+                    </div>
+                </div>
+                <a href="#" class="upload c-white fs-13 rad-6 d-b w-fit bg-blue">
+                    <i class="fa-solid fa-angles-up mr-10"></i>
+                    Upload
+                </a>
+            </div>
+        </div>
+        
+        
+    </div>
+  </div>    
+</body>
+</html>
